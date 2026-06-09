@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#38bdf8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0284c7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="128" height="128" rx="28" fill="url(#grad)" />
+  <!-- Cloud Icon Outline -->
+  <path d="M46 80a22 22 0 0 1-6-43.1 30 30 0 0 1 58-5.8A20 20 0 0 1 94 72a2 2 0 0 1 0-4 16 16 0 0 0 4.2-31.4 2 2 0 0 1-1.6-1.5 26 26 0 0 0-50.7 4.5 2 2 0 0 1-1.5 1.7A18 18 0 0 0 46 76H42a2 2 0 0 1 0-4z" fill="#ffffff" opacity="0.9"/>
+  <!-- Sync Arrows / Upload -->
+  <path d="M64 42a2 2 0 0 1 2 2v28.58l5.29-5.29a2 2 0 0 1 2.83 2.83l-8.7 8.7a2 2 0 0 1-2.83 0l-8.7-8.7a2 2 0 0 1 2.83-2.83l5.29 5.29V44a2 2 0 0 1 2-2z" fill="#ffffff" transform="rotate(180, 64, 64)" />
+  <!-- Circle Base for Sync Arrows -->
+  <path d="M64 100a36 36 0 0 1-24.85-62.1 2 2 0 1 1 2.8-2.85A32 32 0 1 0 88.3 87.2a2 2 0 1 1 2.65 3A35.89 35.89 0 0 1 64 100z" fill="#ffffff" opacity="0.7" />
+</svg>

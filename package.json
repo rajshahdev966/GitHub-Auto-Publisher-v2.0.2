@@ -1,0 +1,128 @@
+{
+  "name": "github-auto-publisher",
+  "displayName": "GitHub Auto Publisher",
+  "description": "Automatically publish and sync files from a selected folder to a GitHub repository with one-click or auto-sync.",
+  "version": "2.0.2",
+  "publisher": "rajshah",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rajshahdev966/JS-Learn-Everything"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "icon": "media/icon.png",
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "github-auto-publisher-container",
+          "title": "GitHub Auto Publisher",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "github-auto-publisher-container": [
+        {
+          "id": "github-auto-publisher-sidebar",
+          "type": "webview",
+          "name": "Dashboard"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "githubAutoPublisher.connectAccount",
+        "title": "GitHub Sync: Connect GitHub Account"
+      },
+      {
+        "command": "githubAutoPublisher.disconnectAccount",
+        "title": "GitHub Sync: Disconnect GitHub Account"
+      },
+      {
+        "command": "githubAutoPublisher.viewConnectedAccount",
+        "title": "GitHub Sync: View Connected Account"
+      },
+      {
+        "command": "githubAutoPublisher.selectFolder",
+        "title": "GitHub Sync: Select Folder"
+      },
+      {
+        "command": "githubAutoPublisher.publish",
+        "title": "GitHub Sync: Publish to GitHub"
+      },
+      {
+        "command": "githubAutoPublisher.toggleAutoSync",
+        "title": "GitHub Sync: Toggle Auto Sync"
+      },
+      {
+        "command": "githubAutoPublisher.connectRepository",
+        "title": "GitHub Sync: Connect Repository"
+      },
+      {
+        "command": "githubAutoPublisher.createRepository",
+        "title": "GitHub Sync: Create Repository"
+      },
+      {
+        "command": "githubAutoPublisher.focusDashboard",
+        "title": "GitHub Sync: Open Dashboard"
+      }
+    ],
+    "configuration": {
+      "title": "GitHub Auto Publisher",
+      "properties": {
+        "githubAutoPublisher.autoSync": {
+          "type": "boolean",
+          "default": false,
+          "description": "Watch the selected folder for file changes and sync to GitHub automatically."
+        },
+        "githubAutoPublisher.commitMessageTemplate": {
+          "type": "string",
+          "default": "",
+          "description": "Template for Git commit messages. If empty, a generic message will be generated automatically."
+        },
+        "githubAutoPublisher.defaultBranch": {
+          "type": "string",
+          "default": "main",
+          "description": "Branch to push changes to (e.g. main, master)."
+        },
+        "githubAutoPublisher.debounceSeconds": {
+          "type": "number",
+          "default": 30,
+          "minimum": 5,
+          "description": "Delay in seconds to wait for changes to settle before running auto sync."
+        },
+        "githubAutoPublisher.selectedFolder": {
+          "type": "string",
+          "default": "",
+          "description": "Local folder to publish and watch for auto-sync."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext .ts"
+  },
+  "dependencies": {
+    "chokidar": "^3.6.0",
+    "simple-git": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/chokidar": "^2.1.3",
+    "@types/node": "^18.15.11",
+    "@types/vscode": "^1.80.0",
+    "typescript": "^5.0.4"
+  }
+}
