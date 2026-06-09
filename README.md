@@ -24,7 +24,7 @@ Say goodbye to manual `git add`, `git commit`, and `git push` command-line cycle
 
 Below is a preview of the clean, theme-adaptive dashboard available in your VS Code Activity Bar:
 
-![GitHub Auto Publisher Dashboard](./dashboard_interface.png)
+![GitHub Auto Publisher Dashboard](./dashboard.png)
 
 ---
 
